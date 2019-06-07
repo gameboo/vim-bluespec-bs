@@ -31,9 +31,11 @@ syntax keyword  bsKeywords valueOf verilog
 syntax keyword  bsKeywords when where
 syntax keyword  bsTypes Integer Bool String Action ActionValue List ListN FIFO FIFOF Array Maybe Either Bit UInt Rules Module Vector
 syntax keyword  bsClasses Bits FShow Arith Eq Bounded Monad MonadFix Literal Ord Bitwise PrimSelectable
+syntax match    bsNumbers "[0-9]*'[hb][0-9a-fA-F][0-9a-fA-F_]*"
 
 let b:current_syntax = "bluespec-bs"
 
 highlight link bsKeywords Keyword
 highlight link bsTypes    Type
 highlight link bsClasses  Type
+highlight link bsNumbers  Number
